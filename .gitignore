@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+*.ipynb
+*.csv
+*.log
+*ipynb*
+data
+*-info
+dist
+build
+
+.vscode
+.pytest_cache
