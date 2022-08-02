@@ -38,7 +38,7 @@ class K8sConfig():
         if hasattr(self, 'resource'):
             container_kwargs.update({"resources": self.resource}) 
             
-        pod_args = { attr:getattr(self, "affinity", None) for attr in ["affinity",'tolerations'] }
+        pod_args = { attr:getattr(self, attr, None) for attr in ["affinity",'tolerations'] }
         pod_args = {k:v for k,v in pod_args.items() if v}
 
         return {
